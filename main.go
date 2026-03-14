@@ -19,11 +19,11 @@ func runHttpRouter() {
 	//register endpoints
 	// enabled logger for incoming request
 	app.Use(logger.New())
-
+	controller := internal.InitializeTaskController()
 	//get task list
-	app.Get("/tasks", internal.InitializeTaskController().GetTasks)
+	app.Get("/tasks", controller.GetTasks)
 	//add task (post)
-	app.Post("/tasks", internal.InitializeTaskController().AddTask)
+	app.Post("/tasks", controller.AddTask)
 
 	err := app.Listen(":3001")
 	if err != nil {

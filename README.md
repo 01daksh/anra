@@ -35,10 +35,10 @@
 
 # Installation
 
-Clone the repository
+Clone the repository or download the zip
 
 ```
-git clone 
+git clone https://github.com/01daksh/anra.git
 cd anra
 ```
 
